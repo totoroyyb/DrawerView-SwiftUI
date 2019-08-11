@@ -49,7 +49,8 @@ struct BottomDrawerView: View {
                     .foregroundColor(backLayerColor).opacity(backLayerOpacity)
                     .animation(backLayerAnimation)
                     .onTapGesture {
-                        // The default behavior of tapping on the back layer is dismiss the drawer
+                        // The default behavior of tapping on
+                        // the back layer is dismiss the drawer
                         self.isShow.toggle()
                     }
             }
@@ -59,7 +60,13 @@ struct BottomDrawerView: View {
                 // Be creative!
                 Text("This is the inner drawer view")
             }
-            .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height / 2)
+            .frame(
+                width: drawerOrientation == Axis.Set.horizontal
+                    ? drawerWidth
+                    : UIScreen.main.bounds.width,
+                height: drawerOrientation == Axis.Set.vertical
+                    ? drawerHeight
+                    : UIScreen.main.bounds.height)
             .background(drawerBackgroundColor)
             .cornerRadius(drawerCornerRadius)
             .offset(y: isShow ? UIScreen.main.bounds.height * 0.25 : UIScreen.main.bounds.height * 0.75)
