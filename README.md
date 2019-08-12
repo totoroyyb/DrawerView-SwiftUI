@@ -7,7 +7,7 @@
 
 *A drawer with some bouncing animation*
 
-![](img/basic.gif)
+<img src="img/basic.gif" width="400">
 
 
 
@@ -17,21 +17,21 @@
 
 You can click anywhere of the darken background to dismiss the DrawerView
 
-![](img/backdismiss.gif)
+<img src="img/backdismiss.gif" width="400">
 
 #### Drag to Dismiss DrawerView
 
 * You can drag the draggable area to dismiss the DrawerView
 
-  ![](img/dragdismiss.gif)
+  <img src="img/dragdismiss.gif" width="400"/>
 
 * However, if the translation of drag action is shorter than you want, you can still restore the DrawerView.
 
-  ![](img/dragrestore.gif)
+  <img src="img/dragrestore.gif" width="400"/>
 
 * Actually, you can even drag it up if you want. You can modify this behavior in the code.
 
-  ![](img/drag.gif)
+  <img src="img/drag.gif" width="400"/>
 
 ## Usage
 
