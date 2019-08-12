@@ -42,6 +42,10 @@ struct DrawerView: View {
     // The default animation of opening up drawer view
     var drawerOutAnimation = Animation.interpolatingSpring(mass: 0.5, stiffness: 45, damping: 45, initialVelocity: 15)
     
+    var isDrawerShadowEnable = true
+    
+    var drawerShadowRadius: CGFloat = 20
+    
     private var xOffset: CGFloat {
         if drawerOrientation == Axis.Set.horizontal {
             let origOffset = isShow ? -(UIScreen.main.bounds.width - drawerWidth) / 2 : -(UIScreen.main.bounds.width + drawerWidth) / 2
@@ -123,6 +127,8 @@ struct DrawerView: View {
                     : UIScreen.main.bounds.height)
             .background(drawerBackgroundColor)
             .cornerRadius(drawerCornerRadius)
+            .shadow(radius: isDrawerShadowEnable ? drawerShadowRadius : 0)
+            .animation(nil)
             .offset(x: xOffset, y: yOffset)
             .animation(drawerOutAnimation)
         }
@@ -140,11 +146,11 @@ struct BottomDrawerView_Previews: PreviewProvider {
             DrawerView(isShow: .constant(true))
                 .previewDisplayName("Drawer is Opened, Vertical")
             
-            DrawerView(isShow: .constant(false), drawerOrientation: Axis.Set.horizontal)
-            .previewDisplayName("Drawer is Closed, Horizontal")
-            
-            DrawerView(isShow: .constant(true), drawerOrientation: Axis.Set.horizontal)
-            .previewDisplayName("Drawer is Opened, Horizontal")
+//            DrawerView(isShow: .constant(false), drawerOrientation: Axis.Set.horizontal)
+//            .previewDisplayName("Drawer is Closed, Horizontal")
+//
+//            DrawerView(isShow: .constant(true), drawerOrientation: Axis.Set.horizontal)
+//            .previewDisplayName("Drawer is Opened, Horizontal")
         }
     }
 }
