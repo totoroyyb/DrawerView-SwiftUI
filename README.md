@@ -1,4 +1,7 @@
 # DrawerView-SwiftUI
+
+**Compatible with Xcode Beta 5 **
+
  **A drawer view implemented by SwiftUI. This is not just simply a demo, instead, it can be directly used in project as a module as it has rudimentary customization flexibility.**
 
 ## Introduction & Demo
@@ -67,14 +70,29 @@ The entire `DrawerView` is coded in the file with the same name as `DrawerView.s
 *All customizable properties have provided in the `DrawerView.swift`. You can directly assign the preferred value to these variables when you initialize the `DrawerView`*
 
 * `backLayerColor`
+
 * `backLayerOpacity`
+
 * `backLayerAnimation`
+
 * `drawerOrientation`
+
 * `drawerHeight`
+
 * `drawerWidth`
+
 * `drawerCornerRadius`
+
 * `drawerBackgroundColor`
+
 * `drawerOutAnimation`
+
+* `isDrawerShadowEnable`
+
+* `drawerShadowRadius` 
+
+  *If you want to customize this property, you need to set `isDrawerShadowEnable` to `true` first. By default, the animation of shadow is suppressed, but you can change it in source file.*
+
 * **To Be Continued**
 
 ## Contribution
