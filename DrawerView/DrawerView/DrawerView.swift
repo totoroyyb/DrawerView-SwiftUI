@@ -27,11 +27,25 @@ struct DrawerView: View {
     
     // The default height of drawer
     // Will be used when orientation set to be VERTICAL
-    var drawerHeight = UIScreen.main.bounds.height / 2
+    var drawerHeight: CGFloat?
+    
+    private var computedDrawerHeight: CGFloat {
+        if let height = drawerHeight {
+            return height
+        }
+        return UIScreen.main.bounds.height / 2
+    }
     
     // The default width of drawer
     // Will be used when orientation set to be HORIZANTAL
-    var drawerWidth = UIScreen.main.bounds.width / 2
+    var drawerWidth: CGFloat?
+    
+    private var computedDrawerWidth: CGFloat {
+        if let width = drawerWidth {
+            return width
+        }
+        return UIScreen.main.bounds.width / 2
+    }
     
     // The default value of corner radius of drawer view
     var drawerCornerRadius: CGFloat = 20
@@ -48,16 +62,22 @@ struct DrawerView: View {
     
     private var xOffset: CGFloat {
         if drawerOrientation == Axis.Set.horizontal {
-            let origOffset = isShow ? -(UIScreen.main.bounds.width - drawerWidth) / 2 : -(UIScreen.main.bounds.width + drawerWidth) / 2
+            let origOffset = isShow ? -(UIScreen.main.bounds.width - computedDrawerWidth) / 2 : -(UIScreen.main.bounds.width + computedDrawerWidth) / 2
             return origOffset - translation.width
         }
         return 0
     }
     
-    private var yOffset: CGFloat {
+    private var initYOffset: CGFloat? {
         if drawerOrientation == Axis.Set.vertical {
-            let origOffset = isShow ? (UIScreen.main.bounds.height - drawerHeight ) / 2 : (UIScreen.main.bounds.height + drawerHeight ) / 2
-            return origOffset + translation.height
+            return isShow ? (UIScreen.main.bounds.height - computedDrawerHeight ) / 2 : (UIScreen.main.bounds.height + computedDrawerHeight ) / 2
+        }
+        return nil
+    }
+    
+    private var yOffset: CGFloat {
+        if let y = initYOffset {
+            return y + translation.height
         }
         return 0
     }
@@ -120,10 +140,10 @@ struct DrawerView: View {
             }
             .frame(
                 width: drawerOrientation == Axis.Set.horizontal
-                    ? drawerWidth
+                    ? computedDrawerWidth
                     : UIScreen.main.bounds.width,
                 height: drawerOrientation == Axis.Set.vertical
-                    ? drawerHeight
+                    ? computedDrawerHeight
                     : UIScreen.main.bounds.height)
             .background(drawerBackgroundColor)
             .cornerRadius(drawerCornerRadius)
