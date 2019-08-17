@@ -14,6 +14,7 @@
 		214B505022FB331C000FEB3E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 214B504F22FB331C000FEB3E /* Preview Assets.xcassets */; };
 		214B505322FB331C000FEB3E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 214B505122FB331C000FEB3E /* LaunchScreen.storyboard */; };
 		214B505B22FB338B000FEB3E /* DrawerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214B505A22FB338B000FEB3E /* DrawerView.swift */; };
+		21B701AB2308224B00500E28 /* SampleDrawerInnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B701AA2308224B00500E28 /* SampleDrawerInnerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		214B505222FB331C000FEB3E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		214B505422FB331C000FEB3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		214B505A22FB338B000FEB3E /* DrawerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawerView.swift; sourceTree = "<group>"; };
+		21B701AA2308224B00500E28 /* SampleDrawerInnerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleDrawerInnerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				214B504822FB3319000FEB3E /* SceneDelegate.swift */,
 				214B504A22FB3319000FEB3E /* ContentView.swift */,
 				214B505A22FB338B000FEB3E /* DrawerView.swift */,
+				21B701AA2308224B00500E28 /* SampleDrawerInnerView.swift */,
 				214B504C22FB331C000FEB3E /* Assets.xcassets */,
 				214B505122FB331C000FEB3E /* LaunchScreen.storyboard */,
 				214B505422FB331C000FEB3E /* Info.plist */,
@@ -150,6 +153,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				214B504722FB3319000FEB3E /* AppDelegate.swift in Sources */,
+				21B701AB2308224B00500E28 /* SampleDrawerInnerView.swift in Sources */,
 				214B504922FB3319000FEB3E /* SceneDelegate.swift in Sources */,
 				214B505B22FB338B000FEB3E /* DrawerView.swift in Sources */,
 				214B504B22FB3319000FEB3E /* ContentView.swift in Sources */,

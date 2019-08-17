@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct DrawerView: View {
+struct DrawerView<Content: View>: View {
     @Binding var isShow: Bool
     
     @State private var translation = CGSize.zero
@@ -59,6 +59,8 @@ struct DrawerView: View {
     var isDrawerShadowEnable = true
     
     var drawerShadowRadius: CGFloat = 20
+    
+    var content: Content
     
     private var xOffset: CGFloat {
         if drawerOrientation == Axis.Set.horizontal {
@@ -120,7 +122,7 @@ struct DrawerView: View {
                                 if value.translation.height > 20 {
                                     self.isShow.toggle()
                                 }
-                            
+                                
                             case Axis.Set.horizontal:
                                 if value.translation.width < -20 {
                                     self.isShow.toggle()
@@ -132,11 +134,7 @@ struct DrawerView: View {
                         }
                 )
                 
-                Spacer()
-                
-                Text("This is the inner drawer view")
-                
-                Spacer()
+                content
             }
             .frame(
                 width: drawerOrientation == Axis.Set.horizontal
@@ -160,10 +158,10 @@ struct DrawerView: View {
 struct BottomDrawerView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            DrawerView(isShow: .constant(false))
+            DrawerView(isShow: .constant(false), content: SampleDrawerInnerView())
                 .previewDisplayName("Drawer is Closed, Vertical")
             
-            DrawerView(isShow: .constant(true))
+            DrawerView(isShow: .constant(true), content: SampleDrawerInnerView())
                 .previewDisplayName("Drawer is Opened, Vertical")
             
 //            DrawerView(isShow: .constant(false), drawerOrientation: Axis.Set.horizontal)
