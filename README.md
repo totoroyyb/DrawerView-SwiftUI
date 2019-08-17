@@ -50,7 +50,9 @@ The entire `DrawerView` is coded in the file with the same name as `DrawerView.s
   VStack {
     // Create your own main view
   }
-  .overlay(DrawerView(isShow: $isShow))
+  .overlay(
+    DrawerView(isShow: $isShow, content: SampleInnerView())
+  )
   ```
 
 * Use `DrawerView` in `ZStack`
@@ -61,9 +63,24 @@ The entire `DrawerView` is coded in the file with the same name as `DrawerView.s
       // Create your own main view
     }
     
-    DrawerView(isShow: $isShow)
+    DrawerView(isShow: $isShow, content: SampleInnerView())
   }
   ```
+  
+  *In the above code, `content` is the inner view of `DrawerView`.*
+  
+  *For example:*
+
+  ``` sw
+  // file: SampleInnerView.swift
+  struct SampleInnerView: View {
+    var body: some View {
+      Text("This is the inner view of DrawerView")
+    }
+  }
+  ```
+
+
 
 ## Customization
 
@@ -92,6 +109,10 @@ The entire `DrawerView` is coded in the file with the same name as `DrawerView.s
 * `drawerShadowRadius` 
 
   *If you want to customize this property, you need to set `isDrawerShadowEnable` to `true` first. By default, the animation of shadow is suppressed, but you can change it in source file.*
+
+* `content`
+
+  *This is property is required in the initializer. You can assign the view you want.*
 
 * **To Be Continued**
 
