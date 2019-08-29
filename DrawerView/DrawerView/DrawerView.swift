@@ -55,7 +55,7 @@ struct DrawerView<Content: View>: View {
     
     // The default animation of opening up drawer view
     var drawerOutAnimation = Animation.interpolatingSpring(mass: 0.5, stiffness: 45, damping: 45, initialVelocity: 15)
-    
+        
     var isDrawerShadowEnable = true
     
     var drawerShadowRadius: CGFloat = 20
@@ -83,6 +83,7 @@ struct DrawerView<Content: View>: View {
         }
         return 0
     }
+    
     
     var body: some View {
         ZStack {
@@ -114,17 +115,18 @@ struct DrawerView<Content: View>: View {
                 .gesture(
                     DragGesture()
                         .onChanged { (value) in
-                            self.translation = value.translation
+                            self.translation.height += value.translation.height
+                            self.translation.width += value.translation.width
                         }
                         .onEnded { (value) in
                             switch self.drawerOrientation {
                             case Axis.Set.vertical:
-                                if value.translation.height > 20 {
+                                if self.translation.height > 20 {
                                     self.isShow.toggle()
                                 }
                                 
                             case Axis.Set.horizontal:
-                                if value.translation.width < -20 {
+                                if self.translation.width < -20 {
                                     self.isShow.toggle()
                                 }
                             default:
@@ -147,7 +149,7 @@ struct DrawerView<Content: View>: View {
             .cornerRadius(drawerCornerRadius)
             .shadow(radius: isDrawerShadowEnable ? drawerShadowRadius : 0)
             .animation(nil)
-            .offset(x: xOffset, y: yOffset)
+                .offset(x: xOffset, y: yOffset)
             .animation(drawerOutAnimation)
         }
         .edgesIgnoringSafeArea(.all)
