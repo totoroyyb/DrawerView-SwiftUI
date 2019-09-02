@@ -18,7 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		214B504322FB3319000FEB3E /* DrawerView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrawerView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		214B504322FB3319000FEB3E /* DrawerView-Demo-SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DrawerView-Demo-SwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		214B504622FB3319000FEB3E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		214B504822FB3319000FEB3E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		214B504A22FB3319000FEB3E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -44,7 +44,7 @@
 		214B503A22FB3319000FEB3E = {
 			isa = PBXGroup;
 			children = (
-				214B504522FB3319000FEB3E /* DrawerView */,
+				214B504522FB3319000FEB3E /* DrawerView-SwiftUI */,
 				214B504422FB3319000FEB3E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -52,12 +52,12 @@
 		214B504422FB3319000FEB3E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				214B504322FB3319000FEB3E /* DrawerView.app */,
+				214B504322FB3319000FEB3E /* DrawerView-Demo-SwiftUI.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		214B504522FB3319000FEB3E /* DrawerView */ = {
+		214B504522FB3319000FEB3E /* DrawerView-SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
 				214B504622FB3319000FEB3E /* AppDelegate.swift */,
@@ -70,7 +70,7 @@
 				214B505422FB331C000FEB3E /* Info.plist */,
 				214B504E22FB331C000FEB3E /* Preview Content */,
 			);
-			path = DrawerView;
+			path = "DrawerView-SwiftUI";
 			sourceTree = "<group>";
 		};
 		214B504E22FB331C000FEB3E /* Preview Content */ = {
@@ -84,9 +84,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		214B504222FB3319000FEB3E /* DrawerView */ = {
+		214B504222FB3319000FEB3E /* DrawerView-Demo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 214B505722FB331C000FEB3E /* Build configuration list for PBXNativeTarget "DrawerView" */;
+			buildConfigurationList = 214B505722FB331C000FEB3E /* Build configuration list for PBXNativeTarget "DrawerView-Demo" */;
 			buildPhases = (
 				214B503F22FB3319000FEB3E /* Sources */,
 				214B504022FB3319000FEB3E /* Frameworks */,
@@ -96,9 +96,9 @@
 			);
 			dependencies = (
 			);
-			name = DrawerView;
+			name = "DrawerView-Demo";
 			productName = BottomDrawerView;
-			productReference = 214B504322FB3319000FEB3E /* DrawerView.app */;
+			productReference = 214B504322FB3319000FEB3E /* DrawerView-Demo-SwiftUI.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -116,7 +116,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 214B503E22FB3319000FEB3E /* Build configuration list for PBXProject "DrawerView" */;
+			buildConfigurationList = 214B503E22FB3319000FEB3E /* Build configuration list for PBXProject "DrawerView-Demo" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -129,7 +129,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				214B504222FB3319000FEB3E /* DrawerView */,
+				214B504222FB3319000FEB3E /* DrawerView-Demo */,
 			);
 		};
 /* End PBXProject section */
@@ -293,16 +293,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "DrawerView/Preview\\ Content";
+				DEVELOPMENT_ASSET_PATHS = "DrawerView-SwiftUI/Preview\\ Content";
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = DrawerView/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/DrawerView-SwiftUI/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = TotoroQ.DrawerView;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "DrawerView-Demo-SwiftUI";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -313,16 +313,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "DrawerView/Preview\\ Content";
+				DEVELOPMENT_ASSET_PATHS = "DrawerView-SwiftUI/Preview\\ Content";
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = DrawerView/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/DrawerView-SwiftUI/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = TotoroQ.DrawerView;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "DrawerView-Demo-SwiftUI";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -331,7 +331,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		214B503E22FB3319000FEB3E /* Build configuration list for PBXProject "DrawerView" */ = {
+		214B503E22FB3319000FEB3E /* Build configuration list for PBXProject "DrawerView-Demo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				214B505522FB331C000FEB3E /* Debug */,
@@ -340,7 +340,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		214B505722FB331C000FEB3E /* Build configuration list for PBXNativeTarget "DrawerView" */ = {
+		214B505722FB331C000FEB3E /* Build configuration list for PBXNativeTarget "DrawerView-Demo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				214B505822FB331C000FEB3E /* Debug */,
