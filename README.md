@@ -1,6 +1,6 @@
 # DrawerView-SwiftUI
 
-**Compatible with Xcode Beta 6 in Simulator. Something goes wrong with live preview. Still under investigation.**
+**Compatible with Xcode Beta 7**
 
  **A drawer view implemented by SwiftUI. This is not just simply a demo, instead, it can be directly used in project as a module as it has rudimentary customization flexibility.**
 
