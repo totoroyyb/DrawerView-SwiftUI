@@ -146,7 +146,6 @@ struct DrawerView<Content: View>: View {
             .background(drawerBackgroundColor)
             .cornerRadius(drawerCornerRadius)
             .shadow(radius: isDrawerShadowEnable ? drawerShadowRadius : 0)
-            .animation(nil)
             .offset(x: xOffset, y: yOffset)
             .animation(drawerOutAnimation)
         }
