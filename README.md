@@ -84,7 +84,7 @@ The entire `DrawerView` is coded in the file with the same name as `DrawerView.s
 
 ## Customization
 
-*All customizable properties have provided in the `DrawerView.swift`. You can directly assign the preferred value to these variables when you initialize the `DrawerView`*
+*All customizable properties have been provided in the `DrawerView.swift`. You can directly assign the preferred value to these variables when you initialize the `DrawerView`*
 
 * `backLayerColor`
 
