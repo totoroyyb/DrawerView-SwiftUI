@@ -3,7 +3,7 @@
  **A drawer view implemented by SwiftUI. This is not just simply a demo, instead, it can be directly used in project as a module as it has rudimentary customization flexibility.**
  
 ## To-Dos
-- [] Fix the computed property error
+- [ ] Fix the computed property error
 
 ## Introduction & Demo
 
